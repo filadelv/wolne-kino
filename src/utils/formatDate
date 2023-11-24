@@ -1,0 +1,13 @@
+export default function formatDate(inputDate) {
+  const dateParts = inputDate.split("-");
+  const year = parseInt(dateParts[0]);
+  const month = parseInt(dateParts[1]);
+  const day = parseInt(dateParts[2]);
+
+  const formattedDate = new Date(year, month - 1, day);
+
+  const options = { day: "numeric", month: "short", year: "numeric" };
+  const result = formattedDate.toLocaleString("pl-PL", options);
+
+  return result;
+}
