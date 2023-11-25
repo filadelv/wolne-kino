@@ -5,12 +5,14 @@ import { For, Show, createResource } from 'solid-js';
 import formatDate from '../utils/formatDate';
 register();
 
+import jebanyapikey from '../../jebanyapikey';
+
 const fetchPopular = async (type) => {
     const options = {
         method: 'GET',
         headers: {
           accept: 'application/json',
-          Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhZTdmYmJmYTA5NWRlNzQyODA2MDExZGZlNzA3M2M3NiIsInN1YiI6IjY1NWZhMmVjYTA5N2RjMDBjNTliNzI0OCIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.mdg004XjBiTCmv1TvypJ2FzkzEvtEtgVSLaEFJzA_OE`
+          Authorization: `Bearer ${jebanyapikey}`
         }
       };
       
